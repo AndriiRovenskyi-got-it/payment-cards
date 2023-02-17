@@ -1,0 +1,23 @@
+@import "src/assets/styles/variables";
+
+.mat-table {
+  overflow: auto;
+  max-height: 450px;
+  mat-header-row {
+    background-color: #e1e7ea;
+  }
+  mat-row,
+  mat-header-row {
+    border: none;
+    min-height: 37px;
+  }
+}
+
+.mat-header-cell,
+mat-cell,
+button {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: $black;
+}

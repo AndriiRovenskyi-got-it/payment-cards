@@ -1,0 +1,43 @@
+@import "../../../assets/styles/variables";
+
+:host {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+}
+
+.mat-card {
+  margin: 100px auto;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: flex-end;
+}
+
+::ng-deep {
+  & .mat-focused .mat-form-field-label {
+    color: $primaryColor;
+  }
+  &.mat-form-field-ripple {
+    background-color: $primaryColor;
+  }
+  &.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: $primaryColor;
+  }
+  & .mat-button {
+    background-color: $primaryColor;
+    color: $white;
+  }
+}

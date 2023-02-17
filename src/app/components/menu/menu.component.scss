@@ -1,0 +1,9 @@
+@import "../../../assets/styles/variables.scss";
+
+section {
+  background-color: $white;
+  border-bottom: $border-line;
+  img {
+    cursor: pointer;
+  }
+}

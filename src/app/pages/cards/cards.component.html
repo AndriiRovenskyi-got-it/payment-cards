@@ -1,0 +1,11 @@
+<div class="d-flex flex-column">
+  <p class="mb-4 page-title">{{ title }}</p>
+  <app-card-table
+    [cardsFromIndexedDB]="cards$ | async"
+    [displayedColumns]="displayedColumns"
+    [columns]="columns"
+    [dataSource]="dataSource?.results"
+    (pinCard)="onPin($event)"
+    (tableScroll)="onTableScroll($event)"
+  ></app-card-table>
+</div>

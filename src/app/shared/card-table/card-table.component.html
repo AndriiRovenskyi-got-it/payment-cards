@@ -1,0 +1,37 @@
+<mat-table
+  class="w-100"
+  [dataSource]="dataSource"
+  (scroll)="onTableScroll($event)"
+>
+  <ng-container
+    *ngFor="let column of columns"
+    [matColumnDef]="column.columnDef"
+  >
+    <mat-header-cell *matHeaderCellDef>
+      {{ column.header }}
+    </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      {{ column.cell(row) }}
+    </mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="pin_card">
+    <mat-header-cell *matHeaderCellDef> Pin card</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button
+        type="button"
+        class="btn btn-light"
+        (click)="onPin(row)"
+        [disabled]="row['pinned']"
+      >
+        {{ row["pinned"] ? "Card is pinned" : "Pin card" }}
+      </button></mat-cell
+    >
+  </ng-container>
+  <mat-header-row
+    *matHeaderRowDef="displayedColumns.concat(['pin_card'])"
+  ></mat-header-row>
+  <mat-row
+    class="pt-2"
+    *matRowDef="let row; columns: displayedColumns.concat(['pin_card'])"
+  ></mat-row>
+</mat-table>

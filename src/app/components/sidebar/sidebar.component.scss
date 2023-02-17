@@ -1,0 +1,26 @@
+@import "../../../assets/styles/variables.scss";
+
+section {
+  padding: 30px;
+  border-right: $border-line;
+  background-color: $white;
+  img {
+    padding-right: 14px;
+  }
+  h1 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  mat-list-item:hover {
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+  .active-link {
+    color: $primaryColor;
+  }
+}

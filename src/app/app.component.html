@@ -1,0 +1,17 @@
+<div
+  class="d-flex w-100 vh-100 flex-row justify-content-start align-items-start main-container"
+>
+  <app-sidebar *ngIf="loggedIn" class="w-25"></app-sidebar>
+  <div
+    class="d-flex flex-column w-100 justify-content-center align-items-center"
+  >
+    <app-menu *ngIf="loggedIn" class="w-100 mb-5"></app-menu>
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+        <div class="col col-lg-11">
+          <router-outlet class="pt5"></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
